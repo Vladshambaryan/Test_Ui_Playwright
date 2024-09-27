@@ -31,6 +31,7 @@ class EcoFriendly(BasePage):
     @allure.step('filter_products_by_price')
     def filter_products_by_price(self):
         self.page.wait_for_selector(ecoloc.price_filter_loc)
+        self.page.wait_for_load_state('networkidle')
         price_filter = self.page.query_selector(ecoloc.price_filter_loc)
         price_filter.click()
         self.page.wait_for_selector(ecoloc.price_range_loc)
@@ -39,5 +40,6 @@ class EcoFriendly(BasePage):
 
     @allure.step('check_filter_products_by_price')
     def check_filter_products_by_price(self, text):
+        self.page.wait_for_load_state('networkidle')
         expect(self.find(ecoloc.filtered_loc)).to_have_text(text)
 
