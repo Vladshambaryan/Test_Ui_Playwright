@@ -20,9 +20,7 @@ class SalePage(BasePage):
         products = self.find(loc.products_loc)
         product_count = products.count()
         expected_count = product_count
-        self.find(loc.products_loc).wait_for(state='visible')
         assert product_count == expected_count
-        self.find(loc.products_loc).wait_for(state='visible')
         expect(products).to_have_count(expected_count)
 
     @allure.step('women_s_deals_element')
