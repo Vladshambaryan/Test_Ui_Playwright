@@ -1,3 +1,5 @@
+from time import sleep
+
 from pages.locators import sale_locators as loc
 from pages.base_page import BasePage
 from playwright.sync_api import expect
@@ -18,6 +20,7 @@ class SalePage(BasePage):
         products = self.find(loc.products_loc)
         product_count = products.count()
         expected_count = product_count
+        sleep(4)
         assert product_count == expected_count
         expect(products).to_have_count(expected_count)
 
