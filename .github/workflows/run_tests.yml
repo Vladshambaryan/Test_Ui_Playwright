@@ -23,11 +23,7 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     name: Run autotests
-    steps:
-
-      - name: Install Playwright
-        run: playwright install 
-        
+    steps: 
       - name: Checkout autotests
         uses: actions/checkout@v4
       - name: Set up Python environment
@@ -36,6 +32,9 @@ jobs:
          python-version: '3.10'
       - name: Install dependencies.
         run: pip install -r requirements.txt  
+
+      - name: Install Playwright
+        run: playwright install   
         
       - name: run all tests
         if: "github.event.inputs.deployment_target == 'all'"
