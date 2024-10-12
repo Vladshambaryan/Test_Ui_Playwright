@@ -10,7 +10,7 @@ import pytest
 @pytest.fixture()
 def page(context: BrowserContext, playwright):
     playwright.selectors.set_test_id_attribute("id")
-    playwright.chromium.launch(headless=True)
+    # playwright.chromium.launch(headless=True)
     page = context.new_page()
     page.set_viewport_size({'width': 1900, 'height': 1020})
     # page.evaluate("document.body.style.zoom='0.7'")
