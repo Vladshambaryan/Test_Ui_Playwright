@@ -1,4 +1,4 @@
-﻿allure-pytest==2.13.2
+
 allure-python-commons==2.13.2
 python-dateutil==2.9.0.post0
 python-json-logger==2.0.7
