@@ -2,10 +2,8 @@
 allure-python-commons==2.13.2
 python-dateutil==2.9.0.post0
 python-json-logger==2.0.7
-pytest==7.4.2
 playwright==1.46.0
 pytest-playwright==0.5.2
-pytest==8.3.2
 allure-pytest==2.13.5
 allure-python-commons==2.13.5
 playwright==1.46.0
@@ -18,7 +16,6 @@ pytest-playwright==0.5.2
 pytest-xdist==3.6.1
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
-
 typing_extensions==4.12.2
 urllib3==1.26.19
 virtualenv==20.26.3
