@@ -35,3 +35,6 @@ class LoginPage(BasePage):
         error = self.find(loc.error_loc)
         print(error.text_content())
         expect(self.find(loc.error_loc)).to_have_text(text)
+
+    def change_quantity(self):
+        self.page.locator("#quantity").select_option("4")

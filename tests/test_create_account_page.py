@@ -3,10 +3,9 @@ import pytest
 
 @pytest.mark.negative
 @pytest.mark.regression
-def test_create_account_incorrect_first_name(create_account_page):
+def test_create_account_incorrect_first_name(create_account_page, data):
     create_account_page.open()
-    create_account_page.fill_incorrect_data('``V', 'Mask', '123abc1236@gmail.com',
-                                            '12345678mM+$VV', '12345678mM+$VV')
+    create_account_page.fill_incorrect_data(data)
     create_account_page.check_error_message_first_name('First Name is not valid!')
 
 

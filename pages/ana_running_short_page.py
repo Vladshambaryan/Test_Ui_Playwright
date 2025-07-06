@@ -1,4 +1,3 @@
-from time import sleep
 
 from playwright.sync_api import expect
 from pages.locators import product_locators as prod
@@ -13,6 +12,7 @@ class AnaRunningShort(BasePage):
     @allure.step('check_product_name')
     def check_product_name(self, text):
         expect(self.find(prod.product_name_loc)).to_have_text(text)
+        expect(self.find(prod.product_name_loc))
 
     @allure.step('check_product_price')
     def check_product_price(self, text):
